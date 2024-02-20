@@ -58,7 +58,7 @@ def fees_report(infile, outfile):
         writer = DictWriter(csvfile, fieldnames=['patron_id','late_fees'])
         writer.writeheader()
         for patron_id, fee in late_fees.items():
-            writer.writerow({'patron_id':patron_id,'late_fees':f'{fee:.2f}')
+            writer.writerow({'patron_id':patron_id,'late_fees':f'{fee:.2f}'})
 
 
 # The following main selection block will only run when you choose
