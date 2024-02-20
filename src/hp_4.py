@@ -11,8 +11,8 @@ def reformat_dates(old_dates):
     reformed_dates = []
     for date_str in old_dates:
         date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-        reformatted_dates.append(date_obj.strftime('%d %b %Y'))
-    return reformatted_dates
+        reformed_dates.append(date_obj.strftime('%d %b %Y'))
+    return reformed_dates
                                 
 
 
