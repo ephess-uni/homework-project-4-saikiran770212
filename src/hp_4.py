@@ -50,9 +50,9 @@ def fees_report(infile, outfile):
             date_returned = datetime.strptime(row['date_returned'],'%m/%d/%Y')    
             days_late = (date_returned - date_due).days
             if days_late > 0:
-                late_fees = days_late * 0.25
+                late_fee = days_late * 0.25
             else:
-                late_fees = 0
+                late_fee = 0
             late_fees[row['patron_id']] += late_fees
     with open(outfile,'w',newline='') as csvfile:
         writer = DictWriter(csvfile, fieldnames=['patron_id','late_fees'])
